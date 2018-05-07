@@ -21,11 +21,11 @@ public class ChatEndpoint {
     }
 
     @MessageMapping("/chat")
-    @SendTo("/stream/greetings") //stream/chat-responses
+    @SendTo("/stream/chat-responses")
     public ChatResponse chat(ChatRequest req) throws Exception {
         logger.info("received chat request: " + req);
         Thread.sleep(1000); // simulated delay
-        return new ChatResponse("Hello, " + HtmlUtils.htmlEscape(req.getUtterance()) + "!");
+        return new ChatResponse("Here is what found for " + HtmlUtils.htmlEscape(req.getUtterance()) + "!!!");
     }
 
 }
