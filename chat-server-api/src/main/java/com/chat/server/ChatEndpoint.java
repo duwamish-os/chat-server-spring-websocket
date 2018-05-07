@@ -20,8 +20,8 @@ public class ChatEndpoint {
         return "ChatServer";
     }
 
-    @MessageMapping("/hello")
-    @SendTo("/topic/greetings")
+    @MessageMapping("/chat")
+    @SendTo("/topic/greetings") //stream/chat-responses
     public ChatResponse chat(ChatRequest req) throws Exception {
         logger.info("received chat request: " + req);
         Thread.sleep(1000); // simulated delay

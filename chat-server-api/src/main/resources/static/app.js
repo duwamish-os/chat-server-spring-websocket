@@ -33,7 +33,7 @@ function disconnect() {
 }
 
 function sendUtterance() {
-    stompClient.send("/chat-app/hello", {}, JSON.stringify({'utterance': $("#utterance").val()}));
+    stompClient.send("/chat-app/chat", {}, JSON.stringify({'utterance': $("#utterance").val()}));
 }
 
 function showGreeting(message) {
