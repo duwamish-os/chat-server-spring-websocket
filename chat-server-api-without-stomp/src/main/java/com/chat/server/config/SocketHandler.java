@@ -22,7 +22,7 @@ public class SocketHandler extends TextWebSocketHandler {
         ObjectMapper objectMapper = new ObjectMapper();
         Map<String, String> value = objectMapper.readValue(message.getPayload(), Map.class);
 
-        session.sendMessage(new TextMessage("Welcome " + value.get("name") + " !"));
+        session.sendMessage(new TextMessage("Welcome " + value.get("username") + " !"));
     }
 
     @Override
@@ -31,4 +31,3 @@ public class SocketHandler extends TextWebSocketHandler {
     }
 
 }
-
