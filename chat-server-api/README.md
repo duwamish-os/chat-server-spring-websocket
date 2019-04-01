@@ -5,6 +5,8 @@ http://jmesnil.net/stomp-websocket/doc/
 
 The WebSocket API enables web applications to handle bidirectional communications with server-side process in a straightforward way. Developers have been using XMLHttpRequest ("XHR") for such purposes, but XHR makes developing web applications that communicate back and forth to the server unnecessarily complex. XHR is basically asynchronous HTTP, and because you need to use a tricky technique like long-hanging GET for sending data from the server to the browser, simple tasks rapidly become complex. As opposed to XMLHttpRequest, WebSockets provide a real bidirectional communication channel in your browser. Once you get a WebSocket connection, you can send data from browser to server by calling a send() method, and receive data from server to browser by an onmessage event handler.
 
+- uses https://github.com/sockjs/sockjs-client#getting-started client
+
 ```
 mvn spring-boot:run
 ```
